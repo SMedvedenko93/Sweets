@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
     public GameObject Hints;
     public bool editMode = false;
     public bool gamePause = false;
+    public bool playMode = false;
 
     [Header("Enemy")]
     public GameObject Enemy;

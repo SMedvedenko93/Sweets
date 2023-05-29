@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.UI;
 
 public class GameScreen : MonoBehaviour
@@ -46,7 +47,7 @@ public class GameScreen : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100))
             {
-                if (GameController.gamePause == false && hit.collider.gameObject.tag == "Character")
+                if (GameController.gamePause == false && hit.collider.gameObject.tag == "Character" && GameController.playMode == false)
                 {
                     var character = hit.collider.gameObject;
                     var characterController = hit.collider.gameObject.GetComponent<CharacterController>();
@@ -98,6 +99,10 @@ public class GameScreen : MonoBehaviour
 
     void PlayButtonOnClick()
     {
+        GameController.playMode = true;
+
+        AnalyticsResult ar = Analytics.CustomEvent("playEvent");
+
         GameController.deactivateButton();
         ActionPlayPressed?.Invoke();
         GameController.ClearHints();

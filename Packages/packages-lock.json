@@ -8,7 +8,7 @@
       "hash": "b870d64b5704a764fd03aaccb11f2dbe652b1756"
     },
     "com.unity.ads": {
-      "version": "3.7.5",
+      "version": "4.4.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {

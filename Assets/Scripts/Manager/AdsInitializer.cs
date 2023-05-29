@@ -51,6 +51,7 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener, IU
 
     public void ShowRewardedAds()
     {
+        Debug.Log("ShowRewardedAds.");
         Advertisement.Show(_adsRew, this);
     }
 
@@ -66,26 +67,31 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener, IU
 
     public void OnUnityAdsAdLoaded(string placementId)
     {
+        Debug.Log("OnUnityAdsAdLoaded.");
         //throw new System.NotImplementedException();
     }
 
     public void OnUnityAdsFailedToLoad(string placementId, UnityAdsLoadError error, string message)
     {
+        Debug.Log("OnUnityAdsFailedToLoad.");
         //throw new System.NotImplementedException();
     }
 
     public void OnUnityAdsShowFailure(string placementId, UnityAdsShowError error, string message)
     {
+        Debug.Log("OnUnityAdsShowFailure.");
         //throw new System.NotImplementedException();
     }
 
     public void OnUnityAdsShowStart(string placementId)
     {
+        Debug.Log("OnUnityAdsShowStart.");
         //throw new System.NotImplementedException();
     }
 
     public void OnUnityAdsShowClick(string placementId)
     {
+        Debug.Log("OnUnityAdsShowClick.");
         //throw new System.NotImplementedException();
     }
 
